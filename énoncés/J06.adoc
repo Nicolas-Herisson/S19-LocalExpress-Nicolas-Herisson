@@ -1,0 +1,10 @@
+= Mayday 🚨
+
+On va s'occuper des erreurs ! L'objectif est de gérer les erreurs dans le projet lors d'un call api en échec.
+
+== Étapes
+
+L'implémentation est libre, fais-toi plaisir !
+
+* Créer un bouton qui appel une route api inexistante
+* Gérer l'erreur dans le composant en affichant un toast d'erreur ou une modal

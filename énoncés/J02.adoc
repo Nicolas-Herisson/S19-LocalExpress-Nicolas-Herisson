@@ -1,0 +1,20 @@
+= Création du projet 👶
+
+Avant de vraiement coder, on va faire en sorte que le projet se mette en production automatiquement 🤓 Puis on va découper l'interface en composants.
+
+== Objectifs pédagogiques
+
+* *Implémenter* une CI/CD
+* *Documenter* le déploiement
+
+== Étapes
+
+* Mettre en place une workflow GitHub Actions pour déployer le projet sur surge
+** Commit et Push pour vérifier que ça fonctionne
+* Créer la page d'accueil, on veut :
+** une entête avec logo, titre et sous-titre
+** un bouton "Commencer"
+** un pied de page avec des trucs 😉
+* Commit pour voir le résultat en ligne 🤩
+* Documenter le déploiement
+** Schéma de déploiement

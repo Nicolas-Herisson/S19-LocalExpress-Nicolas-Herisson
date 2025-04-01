@@ -1,0 +1,17 @@
+= Vous ne passerez pas 🕷️
+
+On fait nos premiers tests automatisés ! Un grand pas pour l'humanité.
+
+== Objectifs pédagogiques
+
+* *Implémenter* des tests unitaires
+
+== Étapes
+
+* Implémenter les tests dans le projet sur quelques fontionnalités :
+** Ajout au panier
+** Suppression du panier
+** Vidage du panier
+** ...
+
+*Bonus* : Découvrir Cypress pour les tests end-to-end

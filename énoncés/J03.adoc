@@ -1,0 +1,52 @@
+= Tango Charlie, répondez ! 🛩️
+
+La communication va être établie ! En local on utilisera le service docker que le formateur à fournit dans son repo (s'il ne l'a pas fait tu as le droit de le charié 😉). En production, on utilisera une api en ligne.
+
+== Objectifs pédagogiques
+
+* *Implémenter* les variables environnements dans le projet
+* *Utiliser* les patterns pour le style
+* *Implémenter* la connexion API
+
+== Étapes
+
+* Adapte ton projet pour avoir l'api en local
+** Intègre la backend fournit par le formateur
+** Modifie le docker-compose pour intégré le backend + database + adminer
+* Intègre la page d'acceuil avec section pour les produit et l'aside pour le panier
+* Récupère la liste des produits pour la page d'accueil sans gérer l'affichage
+* Adapte la CI/CD pour utiliser l'api en ligne (on triche un peu en utilisant dummyJson) : 
+** https://dummyjson.com/docs/products
+** https://dummyjson.com/docs/carts
+
+.🛟 Aide pour les variables d'environnement
+[%collapsible]
+====
+
+Plusieurs solutions sont possibles. On va partir sur des variables d'environnement provenant du docker-compose pour le local et des variables d'environnement provenant du .env pour la prod.
+
+Dans le service `frontend` du docker-compose, on va ajouter :
+
+```yaml
+environment:
+    - VITE_API_URL=http://localhost:3000
+```
+
+Il faut ensuite modifier la configuration de Vite pour qu'il accède ces variables. Modifie le fichier `vite.config.json` pour pouvoir intégrer cette ligne :
+
+```js
+process.env = {...process.env, ...loadEnv(mode, process.cwd())};
+```
+
+Pour la version prod, on se basera sur le .env pour builder le projet. Il faut donc ajouter cette ligne dans le fichier .env :
+
+```js
+VITE_API_URL=https://dummyjson.com
+```
+
+====
+
+== Bonus
+Affiche les produits
+Ajouter le schéma de l'architecture au `CDCF.adoc`
+

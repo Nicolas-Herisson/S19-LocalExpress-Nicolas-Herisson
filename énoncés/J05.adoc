@@ -1,0 +1,8 @@
+= Ouverture du portail, suspense 😲
+
+On utilise des foncitonnalités avancées de React.
+
+== Étapes
+
+* Utiliser Portal pour afficher une modal contenant plus d'information sur un produit
+* Utiliser Suspsense pour afficher un loader pendant le chargement de la liste des produits

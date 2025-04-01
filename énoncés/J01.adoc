@@ -1,0 +1,52 @@
+= Démarrage du projet 🚀
+
+Tu commences à avoir l'habitude :D Commence par analyser le besoin pour bien démarrer.
+
+== Objectifs pédagogiques
+
+* *Analyser* un besoin client
+* *Concevoir* une solution technique
+* *Etablir* des diagrammes UML
+
+== Étapes
+
+=== Conception 
+
+* Etablir une maquette à partir des wireframes fournit.
+** Faire le zonage
+* Schématiser les use cases de l’application et établir les user stories.
+* Etablir un diagramme ERD (diagramme d'entité-association)
+* Etablir un diagramme de séquence pour l'ajout d'un produit au panier.
+* Etablir un diagramme d'activité pour un client
+* Créer un kanban pour gérer le projet et mettre les tâches du sprint.
+
+Ajoute les captures dans le dossier assets puis ajoute les liens depuis le `CDCF.adoc`.
+
+== Bonus
+=== Préparation de l'environnement de travail
+
+* Dans un dossier `projet/frontend`, crée un projet React+Typescript avec [Vite](https://vite.dev/) 
+* Dockerise tout ça. ⚠️ Attention lors du jour 3, le formateur mettra à disposition un docker-compose avec une base de données Postgres et un back. Il faudra que tu l'intègres à ton projet.
+
+.🛟 Aide à la création du projet
+[%collapsible]
+====
+
+* `npm create vite@latest app`
+* `cd app`
+* `npm i`
+* `npm add -D sass`
+* modifier vite.config.ts
+
+```
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: true,
+    watch: {
+      usePolling: true
+    },
+  }
+})
+```
+====

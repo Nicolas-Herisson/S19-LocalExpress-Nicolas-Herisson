@@ -1,0 +1,16 @@
+= U.S.A (Utilisation State Approuvée)
+
+Description courte du contenu de la journée.
+
+== Objectifs pédagogiques
+
+* *Implémenter* le state avec Redux
+
+== Étapes
+
+* Afficher les produits groupés par catégories
+* Ajouter redux au projet
+* Utiliser Redux et manipuler le state pour faire évoluer le composant panier
+** Créer un bouton ajouter au panier
+** Créer un bouton vider le panier
+** Créer des bouton "modifier la quantité" et "supprimer cet article"
