@@ -1,0 +1,56 @@
+.basket-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // gap: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #242424;
+    padding: 10px;
+    width: 200px;
+    height: auto;
+}
+
+.basket-card--Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+    width: 100%;
+}
+
+.basket-card--Body {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+    width: 100%;
+}
+
+.basket-card__image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.basket-card--Body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.basket-card--Footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.basket-card--Footer input {
+    width: 50px;
+}

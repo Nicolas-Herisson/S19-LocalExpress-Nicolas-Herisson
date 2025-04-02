@@ -16,3 +16,7 @@ export interface ITag {
     id: number;
     name: string;
 }
+
+export interface IProductInCart extends IProduct {
+    quantity: number;
+}
