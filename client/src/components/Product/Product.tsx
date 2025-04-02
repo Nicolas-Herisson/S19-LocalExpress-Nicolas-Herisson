@@ -22,9 +22,11 @@ export default function Product() {
         }
     }
     
+    // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
     useEffect(() => {
         fetchProducts();
     }, [])
+
     return (
         <div className="products">
             {products.length === 0 && <p>Loading...</p>}

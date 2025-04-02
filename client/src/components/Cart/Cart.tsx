@@ -8,6 +8,8 @@ import "./Cart.scss"
 export default function Cart() {
     const dispatch = useAppDispatch();
     const cart = useSelector((state: RootState) => state.cart.products);
+
+    const total = cart.reduce((total, product) => total + product.price * product.quantity, 0);
     
     return (
         <div className="cart">
@@ -17,7 +19,7 @@ export default function Cart() {
                 </div>
                 <CartProductList />
                 <div className="cart-total">
-                    <div className="cart-total--price"><strong>Total: {cart.reduce((total, product) => total + product.price * product.quantity, 0)} €</strong></div>
+                    <div className="cart-total--price"><strong>Total: {total} €</strong></div>
                 </div>
             </div>
         )
