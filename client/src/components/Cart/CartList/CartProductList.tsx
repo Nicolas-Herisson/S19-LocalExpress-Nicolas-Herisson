@@ -8,10 +8,11 @@ export default function CartProductList() {
 
     return (
         <div className="homepage__cart-products">
-            {cart.length === 0 && <p>Panier vide</p>}
-            {cart.map((product: IProductInCart) => (
+            {cart.length === 0 ? <p>Panier vide</p> :
+            cart.map((product: IProductInCart) => (
                 <CartCard key={product.id} product={product} />
-            ))}
+            ))
+            }
         </div>
     )
 }
