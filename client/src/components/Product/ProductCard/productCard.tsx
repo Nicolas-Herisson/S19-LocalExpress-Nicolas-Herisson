@@ -3,6 +3,7 @@ import './productCard.scss'
 import Button from "@components/Button/Button";
 import { useAppDispatch } from "@/hooks/redux";
 import { addProduct } from "@/store/features/cartSlice";
+import { createPortal } from "react-dom";
 import { useState } from "react";
 import Modal from "@/ui/Modal/modal";
 
@@ -27,7 +28,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div className="product-card__price">{`${product.price} €`}</div>
                 <Button label="Ajouter" className="add" onClick={handleAddToCart} />
             </div>
-            {isOpenModal && <Modal setIsOpenModal={setIsOpenModal} />}
+            {isOpenModal && createPortal(<Modal setIsOpenModal={setIsOpenModal} />, document.getElementById('portal-modal') as Element)}
         </article>
     )
 }
