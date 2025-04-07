@@ -1,6 +1,6 @@
-import type { IProduct, IProductInCart } from "@/@types";
-import './ProductDetails.scss'
+import type { IProduct } from "@/@types";
 import Button from "@components/Button/Button";
+import './ProductDetails.scss'
 import Modal from "@/ui/Modal/Modal";
 import type { Dispatch, SetStateAction } from "react";
 import { createPortal } from "react-dom";
@@ -18,23 +18,21 @@ export default function ProductDetails({ product, setIsOpenModal, handleAddToCar
                 </div>
                 <div>{product.description}</div>
                 <div>{`stock: ${product.stock}`}</div>
-                <div>{`note: ${product.rating}`}</div>
+                <div>{`note: ${product.rating}/5`}</div>
 
-                {/* <div className="footer"> */}
+                <div className="product-details--footer">
                     {product.discountPercentage ? (
-                        <>
-                        <div className="product-detils--discounted-price">{(product.price * (1 - product.discountPercentage / 100)).toFixed(2)}</div>
-                        <div className="product-details--lineThrough-price">
-                            {product.price} €   
-                        </div>
+                        <div className="product-details--price">
+                            <div className="product-details--lineThrough-price">{product.price}€ </div>
+                            <div className="product-details--discounted-price">{`${(product.price * (1 - product.discountPercentage / 100)).toFixed(2)}€`}</div>
                         
-                        </>
+                        </div>
                     ) :
                         <div className="product-details--price">{product.price}</div>
                     }
                     
                     <Button label="Ajouter" className="add" onClick={handleAddToCart} />
-                {/* </div> */}
+                </div>
             </article>
         </Modal>,
         document.getElementById('portal-modal') as Element

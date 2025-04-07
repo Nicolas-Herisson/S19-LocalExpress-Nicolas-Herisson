@@ -1,11 +1,34 @@
+
+
+.product-details--footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-details--price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 .product-details--lineThrough-price{
     text-decoration: line-through;
 
 }
 
-.product-detils--discounted-price {
+.product-details--discounted-price {
     font-weight: bold;
     background-color: red;
     color: white;
     text-decoration: none;
+}
+
+img {
+    width: auto;
+}
+div {
+    margin-bottom: 10px;
 }
