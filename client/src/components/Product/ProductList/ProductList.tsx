@@ -10,8 +10,7 @@ import { fetchProducts } from "@/store/features/productSlice";
 
 export default function ProductList() {
     const dispatch = useAppDispatch();
-    const { products, loading } = useSelector((state: RootState) => state.product);
-    console.log(products)
+    const { loading } = useSelector((state: RootState) => state.product);
     const groupedProducts = useSelector(getGroupedByCategoryProducts) as GroupedProducts;
 
     useEffect(() => {

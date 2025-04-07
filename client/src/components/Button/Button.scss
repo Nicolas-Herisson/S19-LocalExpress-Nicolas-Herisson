@@ -1,13 +1,9 @@
 button {
     border: 1px solid #242424;
-    background-color: transparent;
-    color: #242424;
     padding: 10px 10px;
-    cursor: pointer;
     border-radius: 5px;
 
     &:hover {
-        background-color: #242424;
-        color: #fff;
+        cursor: pointer;
     }
 }
