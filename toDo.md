@@ -2,13 +2,19 @@
 
 ## Backend
 
+- [x] setup backend architecture
+- [ ] migrations database
 - [ ] Complete backend
 
 ## Frontend
 
-- [ ] css
-- [ ] product detail
-- [ ] product modal
+- [ ] scss barrel test
+- [x] product detail
+- [x] product modal
 - [x] product slice
 - [x] product selector
+- [ ] session
 - [ ] localStorage cart
+- [ ] responsive
+- [ ] Auth
+- [ ] admin side
